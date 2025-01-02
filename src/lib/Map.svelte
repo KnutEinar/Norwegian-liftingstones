@@ -3,6 +3,8 @@
 	import { Loader } from '@googlemaps/js-api-loader';
 	import { stones } from '$lib/stones'
 
+	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
+
 	//import { PUBLIC_GOOGLEMAPS_API_KEY } from '$env/static/public';
 	export let latitude = 61.00725466051024;
 	export let longitude = 8.927172642666734;
@@ -93,7 +95,7 @@
 				}
 
 				if(currStone.img){
-					infoContent += `<img class="object-scale-down size-full px-2" src=${"src/lib/images/stones/" + currStone.img} alt=""/>`
+					infoContent += `<img class="object-scale-down size-full px-2" src=${images[`/src/lib/images/stones/${currStone.img}.jpeg`].default} alt=""/>`
 				}
 								
 				infoContent +=	`<div class="flex flex-row flex-wrap mx-auto content-center gap-6"> 

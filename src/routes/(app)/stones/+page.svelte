@@ -1,6 +1,14 @@
 <script lang="ts">
     import { stones } from '$lib/stones'
 
+    const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
+
+    // let images: { [key: string]: any } = {};
+    
+    // for(const stoneId in stones){
+    //     images.stoneId = import(`../../../lib/images/stones/${stones[stoneId].img}`);
+    // }
+
     let searchTerm: string = "";
 </script>
 
@@ -24,8 +32,14 @@
                         </div>
                         <div class={`grid grid-cols-1 ${stone.img ? "md:grid-cols-2" : "md:grid-cols-1"} gap-5 mt-8`}>
                             {#if stone.img}
+                                <!-- {#await import(`$lib/images/stones/${stone.img}.jpeg`) then { default: src }}
+                                    <div class="md:order-last">
+                                        <img class="object-scale-down p-2" {src} alt="" />
+                                    </div>
+                                {/await} -->
                                 <div class="md:order-last">
-                                    <img class="object-scale-down p-2" src={"src/lib/images/stones/" + stone.img} alt="">
+                                    <img class="object-scale-down p-2"
+                                        src={images[`/src/lib/images/stones/${stone.img}.jpeg`].default} alt="Bilde">
                                 </div>
                             {/if}
                             <div class="flex flex-col gap-5">
