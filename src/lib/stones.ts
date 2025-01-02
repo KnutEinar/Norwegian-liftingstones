@@ -26,7 +26,6 @@ export const stones: stone = {
         weight: 148,
         liftable: "Ja",
         aboutBody: "string",
-        page: false,
         img: "Israelsneset",
     },
     per_persasteinen: {
