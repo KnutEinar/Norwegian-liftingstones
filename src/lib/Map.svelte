@@ -9,7 +9,7 @@
 	export let mapZoom = 6;
 
 	export let hasInfoWindow:boolean = true;
-	export let marker:string;
+	export let marker:string|undefined = undefined;
 
 	let mapElement: HTMLElement;
 	let map: google.maps.Map;
@@ -21,7 +21,7 @@
 			version: 'weekly'
 		});
 
-		const { Map } = await loader.importLibrary('maps');
+		const { Map } = await loader.importLibrary('maps') as google.maps.MapsLibrary;
 
 		map = new Map(mapElement, {
 			center: { lat: latitude , lng: longitude },
@@ -68,7 +68,7 @@
 	};
 
 	async function populateSingleMarker(stone: string){
-		const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+		const { AdvancedMarkerElement } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary;
 
 		const currStone = stones[stone]
 
