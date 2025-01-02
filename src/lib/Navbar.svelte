@@ -5,7 +5,7 @@
     import { base } from "$app/paths";
 
     let links = [
-        {name: "Kart", path: ""},
+        {name: "Kart", path: "/"},
         {name: "Steinliste", path: "/stones"},
         {name: "Om Prosjektet", path: "/about"},
         {name: "Kontakt", path: "/contact"}
