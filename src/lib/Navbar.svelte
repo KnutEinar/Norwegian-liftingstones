@@ -2,6 +2,7 @@
     import NavbarButton from "$lib/NavbarButton.svelte"
     import Hamburger from "./Hamburger.svelte";
 	import HamburgerButton from "./HamburgerButton.svelte";
+    import { base } from "$app/paths";
 
     let links = [
         {name: "Kart", path: "/"},
@@ -20,7 +21,7 @@
 <nav class="bg-bg-gray ">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
         <div class="content-center mx-8">
-            <a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="/">Norske Løftesteiner</a>
+            <a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">Norske Løftesteiner</a>
         </div>
         <div class="md:hidden">
             <Hamburger on:click={() => onHamPress()} bind:pressed={hamburgerPressed}></Hamburger>

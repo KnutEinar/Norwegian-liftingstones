@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { Loader } from '@googlemaps/js-api-loader';
 	import { stones } from '$lib/stones'
+	import { base } from '$app/paths';
 
 	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
 
@@ -38,8 +39,8 @@
 			openInfoWindow = new google.maps.InfoWindow({
 				maxWidth: 250
 			})
-		}
-		openInfoWindow.setContent(`	<div class="flex flex-col gap-2">
+
+			openInfoWindow.setContent(`	<div class="flex flex-col gap-2">
 										<h1 class="texl-lg font-bold mx-auto">
 											Prosjektet er under utvikling
 										</h1>
@@ -47,10 +48,12 @@
 										Flere løftesteiner vil bli lagt inn fortløpende. Dersom du vet om noen løftesteiner;  
 										</p>
 										<a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
-											href="/contact">Ta kontakt</a>
+											href="${base}/contact">Ta kontakt</a>
 									</div>`);
-		openInfoWindow.setPosition({lat: 61.00725466051024, lng: 8.927172642666734});
-		openInfoWindow.open(map, map);
+			openInfoWindow.setPosition({lat: 61.00725466051024, lng: 8.927172642666734});
+			openInfoWindow.open(map, map);
+		}
+		
 
 		populateAllMarkers();
 	});
@@ -89,7 +92,7 @@
 				let infoContent = `<div class="size-full flex flex-col gap-2">`
 				
 				if(currStone.page){
-					infoContent += `<a class="font-bold text-lg" href="/stones/${stone}">${currStone.name}</a>`
+					infoContent += `<a class="font-bold text-lg" href="${base}/stones/${stone}">${currStone.name}</a>`
 				} else {
 					infoContent += `<h1 class="font-bold text-lg">${currStone.name}</h1>`
 				}
@@ -108,7 +111,7 @@
 
 				// Append "Read More" if there is a page on this stone
 				if(currStone.page){
-					infoContent += `<a class="hover:text-blue-500" href="/stones/${stone}">Les mer</a>`;
+					infoContent += `<a class="hover:text-blue-500" href="${base}/stones/${stone}">Les mer</a>`;
 				}
 				
 				infoContent += `</div>`

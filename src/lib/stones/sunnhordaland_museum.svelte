@@ -23,7 +23,7 @@
 
 <div class="m-10">
     <div class="w-full h-80">
-        <Map marker={"sunnhordaland_museum"}/>
+        <Map marker={"sunnhordaland_museum"} hasInfoWindow={false}/>
     </div>
 </div>
 

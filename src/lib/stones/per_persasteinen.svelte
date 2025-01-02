@@ -29,7 +29,7 @@
 
 <div class="m-10">
     <div class="w-full h-80">
-        <Map marker={"per_persasteinen"}/>
+        <Map marker={"per_persasteinen"} hasInfoWindow={false}/>
     </div>
 </div>
 

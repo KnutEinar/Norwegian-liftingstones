@@ -16,7 +16,7 @@
 
 <div class="m-10">
     <div class="w-full h-80">
-        <Map marker={"kolagarden"}/>
+        <Map marker={"kolagarden"} hasInfoWindow={false}/>
     </div>
 </div>
 
