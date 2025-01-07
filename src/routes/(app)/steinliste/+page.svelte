@@ -26,7 +26,7 @@
                     <div class="p-5">
                         <div class="flex justify-center">
                             {#if stone.page}
-                                <a class="font-bold text-xl mx-auto text-center" href="{base}/stones/{stoneId}">{stone.name}</a>
+                                <a class="font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}">{stone.name}</a>
                             {:else}
                                 <h2 class="font-bold text-xl mx-auto text-center">{stone.name}</h2>
                             {/if}
@@ -52,7 +52,7 @@
     
                                 {#if stone.page}
                                     <a class="mx-auto px-2 text-md text-white border-1 border-black rounded-sm bg-bg-gray font-bold"
-                                        href="{base}/stones/{stoneId}"><i>Les mer</i>
+                                        href="{base}/steinliste/{stoneId}"><i>Les mer</i>
                                     </a>
                                 {/if}
                             </div>

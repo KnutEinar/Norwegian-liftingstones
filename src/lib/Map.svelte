@@ -48,7 +48,7 @@
 										Flere løftesteiner vil bli lagt inn fortløpende. Dersom du vet om noen løftesteiner;  
 										</p>
 										<a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
-											href="${base}/contact">Ta kontakt</a>
+											href="${base}/kontakt">Ta kontakt</a>
 									</div>`);
 			openInfoWindow.setPosition({lat: 61.00725466051024, lng: 8.927172642666734});
 			openInfoWindow.open(map, map);
@@ -92,7 +92,7 @@
 				let infoContent = `<div class="size-full flex flex-col gap-2">`
 				
 				if(currStone.page){
-					infoContent += `<a class="font-bold text-lg" href="${base}/stones/${stone}">${currStone.name}</a>`
+					infoContent += `<a class="font-bold text-lg" href="${base}/steinliste/${stone}">${currStone.name}</a>`
 				} else {
 					infoContent += `<h1 class="font-bold text-lg">${currStone.name}</h1>`
 				}
@@ -111,7 +111,7 @@
 
 				// Append "Read More" if there is a page on this stone
 				if(currStone.page){
-					infoContent += `<a class="hover:text-blue-500" href="${base}/stones/${stone}">Les mer</a>`;
+					infoContent += `<a class="hover:text-blue-500" href="${base}/steinliste/${stone}">Les mer</a>`;
 				}
 				
 				infoContent += `</div>`

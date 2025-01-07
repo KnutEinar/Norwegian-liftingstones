@@ -81,7 +81,7 @@
             å høre fra deg. Kanskje kan du hjelpe til med å bevare den norske styrkekulturen med løftesteiner.
         </p>
         <a class="mx-auto px-2 text-lg border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
-        href="{base}/contact">Ta kontakt</a>
+        href="{base}/kontakt">Ta kontakt</a>
     </div>
     
 </div>

@@ -6,9 +6,9 @@
 
     let links = [
         {name: "Kart", path: "/"},
-        {name: "Steinliste", path: "/stones"},
-        {name: "Om Prosjektet", path: "/about"},
-        {name: "Kontakt", path: "/contact"}
+        {name: "Steinliste", path: "/steinliste"},
+        {name: "Om Prosjektet", path: "/om"},
+        {name: "Kontakt", path: "/kontakt"}
     ]
 
     let hamburgerPressed:boolean = false;
