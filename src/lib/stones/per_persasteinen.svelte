@@ -5,7 +5,7 @@
 
 <h1 class="font-bold text-2xl text-center">Per Persasteinen</h1>
 
-<img class="my-10 mx-auto content-center object-scale-down h-96"
+<img class="my-10 mx-auto content-center object-scale-down max-h-96"
     src={Img} alt="Per Persasteinen">
 
 <p class="my-10">

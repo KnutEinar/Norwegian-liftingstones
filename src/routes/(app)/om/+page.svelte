@@ -70,7 +70,7 @@
             <img  class="object-scale-down max-h-80 mx-5"
                 src={Veiing} alt="">
             <p class="text-center text-sm">
-                <a href="{base}/stones/sunnhordaland_museum"><i>Steinen på Sunnhordaland Museum</i> kontrollveies</a>
+                <a href="{base}/steinliste/sunnhordaland_museum"><i>Steinen på Sunnhordaland Museum</i> kontrollveies</a>
             </p>
         </div>
         <p>

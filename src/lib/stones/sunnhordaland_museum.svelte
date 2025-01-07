@@ -6,7 +6,7 @@
 
 <h1 class="font-bold text-2xl text-center">Løftesteinen ved Sunnhordaland Museum</h1>
 
-<img class="my-10 mx-auto content-center object-scale-down h-96"
+<img class="my-10 mx-auto content-center object-scale-down max-h-96"
     src={Sunn} alt="Løftesteinen ligger ved Eldhuset">
 
 <p>

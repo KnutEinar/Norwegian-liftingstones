@@ -11,7 +11,7 @@
         urls = page.url.pathname.split("/")
                 .filter((path) => path.length > 0)
                 .filter((path) => path !== base.replaceAll("/", ""));
-        
+
         names = [...urls];
 
         for(let i = 1; i < urls.length; i++){
@@ -24,16 +24,16 @@
     }
 
     onMount(() => {
-        getFilteredUrl()
+        getFilteredUrl();
     })
 
     afterNavigate(() => {
-        getFilteredUrl()
+        getFilteredUrl();
     })
 </script>
 
-<div class="outline w-full mb-10">
-    <ol class="flex flex-row gap-10 justify-start">
+<div class="w-full mb-6">
+    <ol class="flex flex-row flex-wrap gap-3 md:gap-10 justify-start">
         <li><a href={base}>Hjem</a></li>
         <li>/</li>
         {#each urls as item, index}
