@@ -8,7 +8,7 @@
             Jeg trenger din hjelp til å finne alle løftesteinene i Norge!
         </p>
         <img  class="object-scale-down max-h-96 mx-auto px-4"
-            src={Img} alt="">
+            src={Img} alt="Mannsløftet på Kolagarden">
         <p>
             Dette prosjektet er under utvikling, og flere løftesteiner vil bli lagt til fortløpende.
             Dersom du vet om en stein som du ikke finner på denne siden, eller vet noe mer om noen av steinene

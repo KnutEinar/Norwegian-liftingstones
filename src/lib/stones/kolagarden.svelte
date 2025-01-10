@@ -5,7 +5,7 @@
 
 <h1 class="font-bold text-2xl text-center">Mannsløftet på Kolagarden</h1>
 
-<img class="my-10 mx-auto content-center object-scale-down h-96"
+<img class="my-10 mx-auto content-center object-scale-down max-h-96"
     src={Img} alt="Mannsløftet på Kolagarden">
 
 <p>
@@ -16,7 +16,7 @@
 
 <div class="m-10">
     <div class="w-full h-80">
-        <Map marker={"kolagarden"}/>
+        <Map marker={"kolagarden"} hasInfoWindow={false}/>
     </div>
 </div>
 

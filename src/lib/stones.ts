@@ -18,7 +18,7 @@ export const stones: stone = {
         liftable: "Ja",
         aboutBody: `Ved eldhust på Sunnhordalandstunet ligger en løftestein fra Stord. Steinen er rund og sleip, og kan være utfordrende å få tak på. Steinen har blant annet blitt løftet av Torkel Ravndal.`,
         page: true,
-        img: "Sunnhordaland.jpeg",
+        img: "Sunnhordaland",
     },
     israelsneset: {
         name: "Israelsneset Gard",
@@ -26,8 +26,7 @@ export const stones: stone = {
         weight: 148,
         liftable: "Ja",
         aboutBody: "string",
-        page: true,
-        img: "Israelsneset.jpeg",
+        img: "Israelsneset",
     },
     per_persasteinen: {
         name: "Per Persasteinen",
@@ -36,7 +35,7 @@ export const stones: stone = {
         liftable: "Ja",
         aboutBody: "Per Persasteinen er oppkalt etter Peder Pedersen, en bydekjempe fra Fosen som skal ha løftet steinen og hugget inn teksten som står skrevet på den. Løftesteinen var kjent på Fosen, og har historisk blitt besøkt av fiskelag på vei til Lofotfiske.",
         page: true,
-        img: "Per_Persasteinen.jpeg",
+        img: "Per_Persasteinen",
     },
     kolagarden: {
         name: "Mannsløftet på Kolagarden",
@@ -45,7 +44,7 @@ export const stones: stone = {
         liftable: "Ja",
         aboutBody: `På Kolagarden ligger det en stein som blir kalt et Mannsløft. En mann måtte klare
                     å løfte denne. Steinen ligger godt synlig på en liten steinknaus.`,
-        img: "kolagarden.jpeg",
+        img: "kolagarden",
         page: true,
     }
 }

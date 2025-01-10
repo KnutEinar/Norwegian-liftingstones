@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import Judas from "$lib/images/stones/judas_stone_2023.jpeg"
     import Kirke from "$lib/images/stones/IMG_4290.jpeg"
     import Veiing from "$lib/images/stones/IMG_4179.jpeg"
@@ -69,7 +70,7 @@
             <img  class="object-scale-down max-h-80 mx-5"
                 src={Veiing} alt="">
             <p class="text-center text-sm">
-                <a href="/stones/sunnhordaland_museum"><i>Steinen på Sunnhordaland Museum</i> kontrollveies</a>
+                <a href="{base}/steinliste/sunnhordaland_museum"><i>Steinen på Sunnhordaland Museum</i> kontrollveies</a>
             </p>
         </div>
         <p>
@@ -80,7 +81,7 @@
             å høre fra deg. Kanskje kan du hjelpe til med å bevare den norske styrkekulturen med løftesteiner.
         </p>
         <a class="mx-auto px-2 text-lg border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
-        href="/contact">Ta kontakt</a>
+        href="{base}/kontakt">Ta kontakt</a>
     </div>
     
 </div>

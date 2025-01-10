@@ -1,5 +1,14 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import { stones } from '$lib/stones'
+
+    const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
+
+    // let images: { [key: string]: any } = {};
+    
+    // for(const stoneId in stones){
+    //     images.stoneId = import(`../../../lib/images/stones/${stones[stoneId].img}`);
+    // }
 
     let searchTerm: string = "";
 </script>
@@ -17,15 +26,21 @@
                     <div class="p-5">
                         <div class="flex justify-center">
                             {#if stone.page}
-                                <a class="font-bold text-xl mx-auto text-center" href="/stones/{stoneId}">{stone.name}</a>
+                                <a class="font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}">{stone.name}</a>
                             {:else}
                                 <h2 class="font-bold text-xl mx-auto text-center">{stone.name}</h2>
                             {/if}
                         </div>
                         <div class={`grid grid-cols-1 ${stone.img ? "md:grid-cols-2" : "md:grid-cols-1"} gap-5 mt-8`}>
                             {#if stone.img}
+                                <!-- {#await import(`$lib/images/stones/${stone.img}.jpeg`) then { default: src }}
+                                    <div class="md:order-last">
+                                        <img class="object-scale-down p-2" {src} alt="" />
+                                    </div>
+                                {/await} -->
                                 <div class="md:order-last">
-                                    <img class="object-scale-down p-2" src={"src/lib/images/stones/" + stone.img} alt="">
+                                    <img class="object-scale-down p-2"
+                                        src={images[`/src/lib/images/stones/${stone.img}.jpeg`].default} alt="Bilde">
                                 </div>
                             {/if}
                             <div class="flex flex-col gap-5">
@@ -37,7 +52,7 @@
     
                                 {#if stone.page}
                                     <a class="mx-auto px-2 text-md text-white border-1 border-black rounded-sm bg-bg-gray font-bold"
-                                        href="/stones/{stoneId}"><i>Les mer</i>
+                                        href="{base}/steinliste/{stoneId}"><i>Les mer</i>
                                     </a>
                                 {/if}
                             </div>

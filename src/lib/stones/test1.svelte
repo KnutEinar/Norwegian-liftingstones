@@ -1,7 +1,15 @@
-<h1 class="text-xl font-bold">Test 1</h1>
+<h1 class="text-xl font-bold mx-auto w-full text-center">Om norske løftesteiner</h1>
 
-<p> <strong>Lorem ipsum</strong> dolor sit amet consectetur, adipisicing elit. Aliquam nihil iure mollitia obcaecati. Suscipit saepe ducimus ex ipsum obcaecati, eos amet magni sint, voluptatibus numquam consequuntur atque id quasi temporibus iste aliquam illo minus perferendis voluptas vero sapiente dolorum. Laboriosam quo mollitia odit impedit magni ullam animi quis cumque ratione quaerat, excepturi, repellendus optio qui nostrum dolorum ea aperiam maxime voluptate veniam fugiat, culpa aspernatur. Quibusdam, accusantium ipsum quod consequatur, error vel tenetur aliquid est, suscipit ad culpa debitis magnam ullam sed labore rerum! Quas, unde porro? Sint, eius totam voluptas aperiam porro consectetur inventore ratione laborum nulla amet doloribus!</p>
+<div>bilde</div>
 
-<br> <br>
+<br><br>
 
-<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam totam labore maiores, vero, corporis laudantium tenetur asperiores magnam modi recusandae quidem quas eaque tempore id, neque fugiat? Reiciendis et fugiat neque omnis officia delectus, nostrum qui! Incidunt cumque sed inventore nulla dolor, veritatis laudantium, alias rem illo ullam iusto, suscipit cupiditate corporis quaerat magnam necessitatibus placeat beatae iste nostrum. Odio et nulla dolorem sint distinctio labore maxime magnam necessitatibus vero. Sunt laudantium, quo corrupti eum magni error quis, autem beatae nam enim minus? Natus itaque molestiae ducimus laboriosam libero, distinctio reiciendis, sed tempora nihil sit praesentium architecto vero excepturi?</p>
+<div>definisjon av løftestein kort</div>
+
+<br><br>
+
+<div>kart</div>
+
+<br><br>
+
+<div>Ta tontakt knapp</div>
