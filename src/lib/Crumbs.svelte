@@ -33,15 +33,17 @@
 </script>
 
 <div class="w-full mb-6">
-    <ol class="flex flex-row flex-wrap gap-3 md:gap-10 justify-start">
-        <li><a href={base}>Hjem</a></li>
-        <li>/</li>
+    <ol class="flex flex-row gap-3 md:gap-6 justify-start text-sm sm:text-base">
+        <li class="hover:font-bold">
+            <a href="{base}/">Hjem</a>
+        </li>
+        <li class="">/</li>
         {#each urls as item, index}
-            <li>
+            <li class="hover:font-bold last:hover:font-semibold last:font-semibold">
                 <a href="{base}/{item}">{names[index]}</a>
             </li>
             {#if index !== urls.length - 1}
-                <li>/</li>
+                <li class="">/</li>
             {/if}
         {/each}
     </ol>
