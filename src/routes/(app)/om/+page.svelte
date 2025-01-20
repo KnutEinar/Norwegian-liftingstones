@@ -15,7 +15,7 @@
     import Veiing from "$lib/images/stones/IMG_4179.jpeg?enhanced&w=768";
 </script>
 
-<enhanced:img class="min-w-full max-h-80 -mt-4 md:-mt-6"
+<enhanced:img class="min-w-full object-contain -mt-4 md:-mt-6"
             src="$lib/images/stones/kolagarden_banner.jpeg?w=1780" alt="Løftesteinen på Kolagarden i vakre omgivelser"/>
 
 

@@ -8,7 +8,7 @@
 </script>
 
 <div class="relative -mt-4 md:-mt-6 mb-10 bg-[#4b5e78]">
-    <enhanced:img class="object-scale-down md:w-4/5 lg:w-2/3 mx-auto"
+    <enhanced:img class="object-contain md:w-4/5 lg:w-2/3 mx-auto"
             src="$lib/images/stones/home_banner.jpeg" alt="Løftesteinen på Kolagarden i vakre omgivelser"/>
     <h1 class="absolute w-1/2 top-1/3 left-1/4 text-center font-semibold text-white 
             text-3xl sm:text-5xl lg:text-7xl">
