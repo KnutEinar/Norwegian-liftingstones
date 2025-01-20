@@ -27,7 +27,7 @@
 
     <ArticleImgText img={PerPers}
         alt={"Per Persasteinen på Sverrresborg Folkemuseum"}
-        text={'<a href="{base}/steinliste/per_persasteinen" class="underline hover:text-blue-500">Per Persasteinen</a> på Sverrresborg Folkemuseum'} 
+        text={`<a href="${base}/steinliste/per_persasteinen" class="underline hover:text-blue-500">Per Persasteinen</a> på Sverrresborg Folkemuseum`} 
         padding={"px-4 md:px-10"}
         imgSize={"max-h-72"}/>
 
