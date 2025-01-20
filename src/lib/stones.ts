@@ -5,7 +5,7 @@ export interface stone {
         weight: number;
         liftable: "Ja" | "Nei" | "Ukjent";
         aboutBody: string;
-        page?: Boolean;
+        page: Boolean;
         img?: string;
     }
 }
@@ -27,6 +27,7 @@ export const stones: stone = {
         liftable: "Ja",
         aboutBody: "Mer info kommer",
         img: "Israelsneset",
+        page: false,
     },
     per_persasteinen: {
         name: "Per Persasteinen",
