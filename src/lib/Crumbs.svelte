@@ -4,8 +4,8 @@
     import { onMount } from 'svelte';
     import { afterNavigate } from '$app/navigation';
 
-    let urls: Array<string> = [];
-    let names: Array<string> = [];
+    let urls: Array<string> = $state([]);
+    let names: Array<string> = $state([]);
     
     const getFilteredUrl = (): void => {
         urls = page.url.pathname.split("/")

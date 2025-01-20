@@ -3,16 +3,30 @@
 	import { Loader } from '@googlemaps/js-api-loader';
 	import { stones } from '$lib/stones'
 	import { base } from '$app/paths';
+	import MapCloseButton from './MapCloseButton.svelte';
 
-	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
+	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { 
+			eager: true, 
+			query: {
+				w: 250
+			} 
+		});
 
-	//import { PUBLIC_GOOGLEMAPS_API_KEY } from '$env/static/public';
-	export let latitude = 61.00725466051024;
-	export let longitude = 8.927172642666734;
-	export let mapZoom = 6;
+	interface Props {
+		latitude?: number;
+		longitude?: number;
+		mapZoom?: number;
+		hasInfoWindow?: boolean;
+		marker?: string|undefined;
+	}
 
-	export let hasInfoWindow:boolean = true;
-	export let marker:string|undefined = undefined;
+	let {
+		latitude = 61.00725466051024,
+		longitude = 8.927172642666734,
+		mapZoom = 6,
+		hasInfoWindow = true,
+		marker = undefined
+	}: Props = $props();
 
 	let mapElement: HTMLElement;
 	let map: google.maps.Map;
@@ -39,18 +53,23 @@
 			openInfoWindow = new google.maps.InfoWindow({
 				maxWidth: 250
 			})
+			
+			openInfoWindow.setHeaderDisabled(true);
 
-			openInfoWindow.setContent(`	<div class="flex flex-col gap-2">
-										<h1 class="texl-lg font-bold mx-auto">
-											Prosjektet er under utvikling
-										</h1>
+			let content = `	<div class="flex flex-col gap-3 my-3">
+											<h1 class="texl-lg font-bold mx-auto text-center">
+												Prosjektet er under utvikling
+											</h1>								
 										<p>
-										Flere løftesteiner vil bli lagt inn fortløpende. Dersom du vet om noen løftesteiner;  
+										Flere løftesteiner vil bli lagt inn fortløpende. Send gjerne inn et tips dersom du vet om noen løftesteiner!  
 										</p>
 										<a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
 											href="${base}/kontakt">Ta kontakt</a>
-									</div>`);
-			openInfoWindow.setPosition({lat: 61.00725466051024, lng: 8.927172642666734});
+									</div>`;
+			
+			openInfoWindow.setContent(content);
+
+			openInfoWindow.setPosition({lat: latitude, lng: longitude});
 			openInfoWindow.open(map, map);
 		}
 		
@@ -89,16 +108,17 @@
 					openInfoWindow.close();
 				}
 
-				let infoContent = `<div class="size-full flex flex-col gap-2">`
+				let infoContent = `<div class="size-full flex flex-col gap-3 my-3">`
 				
 				if(currStone.page){
-					infoContent += `<a class="font-bold text-lg" href="${base}/steinliste/${stone}">${currStone.name}</a>`
+					infoContent += `<a class="font-bold text-lg text-center" href="${base}/steinliste/${stone}">${currStone.name}</a>`
 				} else {
-					infoContent += `<h1 class="font-bold text-lg">${currStone.name}</h1>`
+					infoContent += `<h1 class="font-bold text-lg text-center">${currStone.name}</h1>`
 				}
 
 				if(currStone.img){
-					infoContent += `<img class="object-scale-down size-full px-2" src=${images[`/src/lib/images/stones/${currStone.img}.jpeg`].default} alt=""/>`
+					infoContent += `<img class="object-scale-down size-full px-2"
+									src=${images[`/src/lib/images/stones/${currStone.img}.jpeg`].default} alt="${currStone.name}"/>`
 				}
 								
 				infoContent +=	`<div class="flex flex-row flex-wrap mx-auto content-center gap-6"> 
@@ -111,7 +131,7 @@
 
 				// Append "Read More" if there is a page on this stone
 				if(currStone.page){
-					infoContent += `<a class="hover:text-blue-500" href="${base}/steinliste/${stone}">Les mer</a>`;
+					infoContent += `<a class="hover:text-blue-500 underline" href="${base}/steinliste/${stone}">Les mer</a>`;
 				}
 				
 				infoContent += `</div>`
@@ -131,4 +151,4 @@
 
 </script>
 
-<div class="h-full w-full" bind:this={mapElement} />
+<div class="h-full w-full" bind:this={mapElement}></div>

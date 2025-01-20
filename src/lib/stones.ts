@@ -25,7 +25,7 @@ export const stones: stone = {
         location: {lat: 59.398444, lng: 6.102514},
         weight: 148,
         liftable: "Ja",
-        aboutBody: "string",
+        aboutBody: "Mer info kommer",
         img: "Israelsneset",
     },
     per_persasteinen: {
@@ -35,7 +35,7 @@ export const stones: stone = {
         liftable: "Ja",
         aboutBody: "Per Persasteinen er oppkalt etter Peder Pedersen, en bydekjempe fra Fosen som skal ha løftet steinen og hugget inn teksten som står skrevet på den. Løftesteinen var kjent på Fosen, og har historisk blitt besøkt av fiskelag på vei til Lofotfiske.",
         page: true,
-        img: "Per_Persasteinen",
+        img: "per_persasteinen",
     },
     kolagarden: {
         name: "Mannsløftet på Kolagarden",
@@ -46,5 +46,15 @@ export const stones: stone = {
                     å løfte denne. Steinen ligger godt synlig på en liten steinknaus.`,
         img: "kolagarden",
         page: true,
+    },
+    helleland: {
+        name: "Helleland-steinen",
+        location: {lat: 58.541571421993346, lng: 6.125394277642868},
+        weight: 173,
+        liftable: "Ja",
+        aboutBody: `Steinen ligger ved Helleland kirke, ved parkeringsplassen utenfor kirkeporten.
+                    Et løft består av å løfte steinen opp på et om lag 30 cm høyt platå (lensmanssteinen).`,
+        img: "IMG_4290",
+        page: false,
     }
 }

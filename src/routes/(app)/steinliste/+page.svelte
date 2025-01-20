@@ -1,21 +1,30 @@
 <script lang="ts">
     import { base } from '$app/paths';
     import { stones } from '$lib/stones'
+    import Crumbs from '$lib/Crumbs.svelte';
 
-    const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { eager: true });
+    const images: any = import.meta.glob('$lib/images/stones/**.jpeg', { 
+        eager: true,
+        query: {
+				w: 300
+			} 
+    });
 
-    // let images: { [key: string]: any } = {};
-    
-    // for(const stoneId in stones){
-    //     images.stoneId = import(`../../../lib/images/stones/${stones[stoneId].img}`);
-    // }
-
-    let searchTerm: string = "";
+    let searchTerm: string = $state("");
 </script>
+
+<Crumbs />
+
+<div class="mx-auto mt-6 mb-10">
+    <h1 class="text-4xl font-semibold text-center">
+        Steinliste
+    </h1>
+</div>
 
 <div class="mx-auto">
     <div class="w-auto h-auto flex justify-center mb-10">
-        <input type="text" placeholder="Søk i Løftesteinene" autocomplete="off" bind:value={searchTerm} on:input
+        <input type="text" placeholder="Søk i Løftesteinene"
+        autocomplete="off" bind:value={searchTerm} 
         class="appearance-none h-12 border-2 border-black outline-none focus:shadow-lg p-2">
     </div>
     
@@ -33,14 +42,9 @@
                         </div>
                         <div class={`grid grid-cols-1 ${stone.img ? "md:grid-cols-2" : "md:grid-cols-1"} gap-5 mt-8`}>
                             {#if stone.img}
-                                <!-- {#await import(`$lib/images/stones/${stone.img}.jpeg`) then { default: src }}
-                                    <div class="md:order-last">
-                                        <img class="object-scale-down p-2" {src} alt="" />
-                                    </div>
-                                {/await} -->
                                 <div class="md:order-last">
                                     <img class="object-scale-down p-2"
-                                        src={images[`/src/lib/images/stones/${stone.img}.jpeg`].default} alt="Bilde">
+                                        src={images[`/src/lib/images/stones/${stone.img}.jpeg`].default} alt="${stone.name}">
                                 </div>
                             {/if}
                             <div class="flex flex-col gap-5">
@@ -51,7 +55,7 @@
                                 <p>{@html stone.aboutBody}</p>
     
                                 {#if stone.page}
-                                    <a class="mx-auto px-2 text-md text-white border-1 border-black rounded-sm bg-bg-gray font-bold"
+                                    <a class="size-min text-nowrap px-4 py-2 text-md rounded-md border-2 border-bg-gray"
                                         href="{base}/steinliste/{stoneId}"><i>Les mer</i>
                                     </a>
                                 {/if}

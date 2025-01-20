@@ -5,13 +5,14 @@
     import { base } from "$app/paths";
 
     let links = [
-        {name: "Kart", path: "/"},
-        {name: "Steinliste", path: "/steinliste"},
-        {name: "Om Prosjektet", path: "/om"},
-        {name: "Kontakt", path: "/kontakt"}
+        {name: "Hjem", path: ""},
+        {name: "Kart", path: "kart"},
+        {name: "Steinliste", path: "steinliste"},
+        {name: "Om Prosjektet", path: "om"},
+        {name: "Kontakt", path: "kontakt"}
     ]
 
-    let hamburgerPressed:boolean = false;
+    let hamburgerPressed:boolean = $state(false);
 
     function onHamPress() {
         hamburgerPressed = !hamburgerPressed;
@@ -21,10 +22,10 @@
 <nav class="bg-bg-gray ">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
         <div class="content-center mx-8">
-            <a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="{base}">Norske Løftesteiner</a>
+            <a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">Norske Løftesteiner</a>
         </div>
         <div class="md:hidden">
-            <Hamburger on:click={() => onHamPress()} bind:pressed={hamburgerPressed}></Hamburger>
+            <Hamburger {onHamPress} {hamburgerPressed}></Hamburger>
         </div>
         <div class="hidden md:block">
             <div class="items-center flex justify-end">
@@ -34,11 +35,12 @@
             </div>
         </div>
     </div>
-    <div class={`${hamburgerPressed ? "h-56" : "h-0"} transition-[height] duration-500 overflow-hidden`}>
+    <div class={`md:hidden ${hamburgerPressed ? "h-min" : "h-0"} transition-[height] duration-500 overflow-hidden`}>
         <div class="items-center flex flex-col justify-start">
             {#each links as {name, path}}
-                <HamburgerButton on:click={() => {hamburgerPressed = false;}} name={name} source={path}/>
+                <HamburgerButton name={name} source={path} onPress={() => hamburgerPressed = false}/>
             {/each}
+            <div class="h-2"></div>
         </div>
     </div>
 </nav>

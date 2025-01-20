@@ -1,9 +1,14 @@
 <script lang="ts">
-    import { stones } from '$lib/stones';
+    import type { PageData } from './$types';
+    import Crumbs from "$lib/Crumbs.svelte";
 
-    export let data;
+    let { data }: { data: PageData } = $props();
 </script>
 
 <div class="mx-auto w-full">
-    <svelte:component this={data.content} />
+    <Crumbs />
+    
+    <div class="flex flex-col gap-10">
+        {@render data.content?.()}
+    </div>
 </div>

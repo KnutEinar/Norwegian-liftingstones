@@ -1,12 +1,19 @@
 <script lang="ts">
 	import Map from "$lib/Map.svelte";
-    import Img from "$lib/images/stones/kolagarden.jpeg"
+    import ArticleHeading from "$lib/ArticleHeading.svelte";
+
+    //Config
+    // @ts-expect-error
+    import topImg from '$lib/images/stones/kolagarden.jpeg?enhanced&w=768';
+    let stoneId = "kolagarden";
+    let heading = "Mannsløftet på Kolagarden";
 </script>
 
-<h1 class="font-bold text-2xl text-center">Mannsløftet på Kolagarden</h1>
+<ArticleHeading {heading}/>
 
-<img class="my-10 mx-auto content-center object-scale-down max-h-96"
-    src={Img} alt="Mannsløftet på Kolagarden">
+<enhanced:img class="mx-auto object-scale-down max-h-96"
+    src={topImg}
+    alt="Mannsløftet på Kolagarden" />
 
 <p>
     På Kolagarden ligger det en stein på <strong>128 kg</strong> som blir kalt et Mannsløft. En mann måtte klare
@@ -14,12 +21,14 @@
     steinen ligger har man god utsikt utover hele dalen.
 </p>
 
-<div class="m-10">
+<div class="mx-4 md:mx-10">
     <div class="w-full h-80">
-        <Map marker={"kolagarden"} hasInfoWindow={false}/>
+        <Map marker={stoneId} hasInfoWindow={false}/>
     </div>
 </div>
 
-For å nå steinen må man gå noe. Fra Gardavegen følger man den private vegen fra bommen og opp til gården,
-herfra er det ganske bratt og ulendt opp til steinen. Mannsløftet ligger godt synlig på en liten 
-steinknaus. Det er omtrent 1.5 km opp til steinen fra Gardavegen.
+<div>
+    For å nå steinen må man gå noe. Fra Gardavegen følger man den private vegen fra bommen og opp til gården,
+    herfra er det ganske bratt og ulendt opp til steinen. Mannsløftet ligger godt synlig på en liten 
+    steinknaus. Det er omtrent 1.5 km opp til steinen fra Gardavegen.
+</div>

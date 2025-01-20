@@ -1,15 +1,17 @@
-<h1 class="text-xl font-bold mx-auto w-full text-center">Om norske løftesteiner</h1>
+<script lang="ts">
+    	import MapCloseButton from "$lib/MapCloseButton.svelte";
+</script>
 
-<div>bilde</div>
-
-<br><br>
-
-<div>definisjon av løftestein kort</div>
-
-<br><br>
-
-<div>kart</div>
-
-<br><br>
-
-<div>Ta tontakt knapp</div>
+<div class="flex flex-col gap-3 my-3">
+    <div class="flex flex-row">
+        <h1 class="texl-lg font-bold mx-auto text-center">
+            Prosjektet er under utvikling
+        </h1>
+        <MapCloseButton callback={() => {console.log("Pressed")}}/>
+    </div>										
+    <p>
+    Flere løftesteiner vil bli lagt inn fortløpende. Send gjerne inn et tips dersom du vet om noen løftesteiner!  
+    </p>
+    <a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
+        href="$/kontakt">Ta kontakt</a>
+</div>

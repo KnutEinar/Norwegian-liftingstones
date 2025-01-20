@@ -1,12 +1,13 @@
 import type { EntryGenerator } from './$types';
+import { stones } from '$lib/stones';
 
 export const entries: EntryGenerator = () => {
-	return [
-		{ stoneId: 'sunnhordaland_museum' },
-		{ stoneId: 'israelsneset' },
-        { stoneId: 'per_persasteinen' },
-        { stoneId: 'kolagarden' },
-	];
+    let paths: Array<{ stoneId: string }> = [];
+
+    for(const key of Object.keys(stones)){
+        paths.push({ stoneId: key})
+    }
+	return paths;
 };
 
 export async function load({ params }) {
@@ -20,3 +21,4 @@ export async function load({ params }) {
 }
 
 export const prerender = true;
+export const ssr = true;
