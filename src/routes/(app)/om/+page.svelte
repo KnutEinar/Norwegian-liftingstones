@@ -70,7 +70,7 @@
 
         <ArticleImgText img={Veiing}
                 alt={"Steinen på Sunnhordaland Museum kontrollveies"}
-                text={'<a href="{base}/steinliste/sunnhordaland_museum" class="underline hover:text-blue-500"><i>Steinen på Sunnhordaland Museum</i></a> kontrollveies'} 
+                text={`<a href="${base}/steinliste/sunnhordaland_museum" class="underline hover:text-blue-500"><i>Steinen på Sunnhordaland Museum</i></a> kontrollveies`} 
                 padding={"px-4 md:px-10"}
                 imgSize={"max-h-80"}/>
 
