@@ -5,7 +5,9 @@ export const entries: EntryGenerator = () => {
     let paths: Array<{ stoneId: string }> = [];
 
     for(const key of Object.keys(stones)){
-        paths.push({ stoneId: key})
+        if(stones.key.page){
+            paths.push({ stoneId: key})
+        }
     }
 	return paths;
 };
