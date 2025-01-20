@@ -15,7 +15,7 @@ const config = {
 		}),
 		appDir: 'app',
 		paths: {
-//			base: "/Norwegian-liftingstones",
+			base: "/Norwegian-liftingstones",
 		}
 	}
 };
