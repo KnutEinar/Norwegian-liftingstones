@@ -57,5 +57,14 @@ export const stones: stone = {
                     Et løft består av å løfte steinen opp på et om lag 30 cm høyt platå (lensmanssteinen).`,
         img: "IMG_4290",
         page: false,
+    },
+    rysstad: {
+        name: "Manndomssteinen på Rysstad",
+        location: {lat: 59.09516969698624, lng: 7.527288455485615},
+        weight: 133.5,
+        liftable: "Ja",
+        aboutBody: `Manndomssteinen på Rysstad ligger utenfor Setesdalsmuseet. Den veier 133.5 kg, og kommer opprinnelig fra Fardalen, vest for Rysstad.`,
+        page: true,
+        img: "rysstad",
     }
 }
