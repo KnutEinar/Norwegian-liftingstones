@@ -19,7 +19,7 @@
     }
 </script>
 
-<nav class="bg-bg-gray ">
+<nav class="bg-bg-gray relative">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
         <div class="content-center mx-8">
             <a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">Norske Løftesteiner</a>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class={`md:hidden ${hamburgerPressed ? "h-min" : "h-0"} transition-[height] duration-500 overflow-hidden`}>
+    <div class={`md:hidden w-full mx-auto absolute z-10 bg-bg-gray opacity-95 ${hamburgerPressed ? "h-min" : "h-0"} transition-[height] duration-500 overflow-hidden`}>
         <div class="items-center flex flex-col justify-start">
             {#each links as {name, path}}
                 <HamburgerButton name={name} source={path} onPress={() => hamburgerPressed = false}/>
