@@ -15,7 +15,7 @@
 
 <enhanced:img class="mx-auto object-scale-down max-h-96"
     src={topImg}
-    alt="Løftesteinen ligger ved Eldhuset" />
+    alt="Løftestein på Rysstad" />
 
 <p>
     Utenfor Setesdalsmuseet på Rystad ligger det en løftestein som historisk har blitt brukt som manndomsprøve. Steinen veier 133.5 kg, har en flat underside og en avrundet topp. Opprinnelig lå steinen i nærheten av Brokke i Fardalen vest for Rysstad, en av sidedalene til Setesdalen. 

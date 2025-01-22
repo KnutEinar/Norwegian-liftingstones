@@ -6,11 +6,11 @@
     // @ts-expect-error
     import PerPers from "$lib/images/stones/per_persasteinen.jpeg?enhanced&w=768";
 </script>
-
-<div class="relative -mt-4 md:-mt-6 mb-10 bg-[#4b5e78]">
-    <enhanced:img class="object-contain md:w-4/5 lg:w-2/3 mx-auto"
+<!-- md:w-4/5 lg:w-2/3 -->
+<div class="relative h-96 -mt-4 md:-mt-6 mb-10 bg-[#4b5e78]">
+    <enhanced:img class="object-cover object-top h-full mx-auto"
             src="$lib/images/stones/home_banner.jpeg" alt="Løftesteinen på Kolagarden i vakre omgivelser"/>
-    <h1 class="absolute w-1/2 top-1/3 left-1/4 text-center font-semibold text-white 
+    <h1 class="absolute w-1/2 top-1/3 left-1/4 text-center font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]
             text-3xl sm:text-5xl lg:text-7xl">
         Norske Løftesteiner
     </h1>
