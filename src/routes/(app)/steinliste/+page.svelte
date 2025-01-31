@@ -49,7 +49,7 @@
                             {/if}
                             <div class="flex flex-col gap-5">
                                 <div class="flex flex-row flex-wrap justify-center gap-10">
-                                    <p> <strong>Vekt: </strong> {stone.weight} kg</p>
+                                    <p> <strong>Vekt: </strong> {stone.weight.toString().replaceAll(",", " og ")} kg</p>
                                     <p> <strong>Løftbar: </strong> {stone.liftable}</p>
                                 </div>    
                                 <p>{@html stone.aboutBody}</p>

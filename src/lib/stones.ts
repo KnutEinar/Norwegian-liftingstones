@@ -2,7 +2,7 @@ export interface stone {
     [stoneId: string]: {
         name: string;
         location: {lat: number, lng: number};
-        weight: number;
+        weight: number | Array<number>;
         liftable: "Ja" | "Nei" | "Ukjent";
         aboutBody: string;
         page: Boolean;
@@ -57,5 +57,23 @@ export const stones: stone = {
                     Et løft består av å løfte steinen opp på et om lag 30 cm høyt platå (lensmanssteinen).`,
         img: "IMG_4290",
         page: false,
+    },
+    rysstad: {
+        name: "Manndomssteinen på Rysstad",
+        location: {lat: 59.09516969698624, lng: 7.527288455485615},
+        weight: 133.5,
+        liftable: "Ja",
+        aboutBody: `Manndomssteinen på Rysstad ligger utenfor Setesdalsmuseet. Den veier 133.5 kg, og kommer opprinnelig fra Fardalen, vest for Rysstad.`,
+        page: true,
+        img: "rysstad",
+    },
+    fjotland: {
+        name: "Lesarsteinen og Prestesteinen",
+        location: {lat: 58.522686877144366, lng: 6.991169064223241},
+        weight: [102, 207],
+        liftable: "Ja",
+        aboutBody: `I Fjotland ligger det to løftesteiner, den mindre Lesarsteinen, og den tyngre Prestesteinen. Lesarsteinen var en manndomsprøve for unge fjotlendinger, og Prestesteinen skal ha blitt løftet en av prestene i Fjotland på sent 1800-tallet.`,
+        page: true,
+        img: "fjotland",
     }
 }

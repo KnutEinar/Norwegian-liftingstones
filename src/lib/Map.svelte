@@ -122,7 +122,7 @@
 				}
 								
 				infoContent +=	`<div class="flex flex-row flex-wrap mx-auto content-center gap-6"> 
-									<p class=""> <strong>Vekt: </strong> ${currStone.weight} kg</p>
+									<p class=""> <strong>Vekt: </strong> ${currStone.weight.toString().replaceAll(",", " og ")} kg</p>
 									<p class=""> <strong>Løftbar: </strong> ${currStone.liftable}</p>
 								</div>
 								<div class="">
