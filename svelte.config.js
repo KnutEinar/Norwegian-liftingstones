@@ -14,9 +14,6 @@ const config = {
       		assets: 'build',
 		}),
 		appDir: 'app',
-		paths: {
-			base: "/Norwegian-liftingstones",
-		}
 	}
 };
 
