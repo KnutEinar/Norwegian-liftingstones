@@ -11,9 +11,9 @@ const config = {
 		adapter: adapter({
 			fallback: '404.html',
 			pages: 'build',
-      		assets: 'build',
+			assets: 'build'
 		}),
-		appDir: 'app',
+		appDir: 'app'
 	}
 };
 

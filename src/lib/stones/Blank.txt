@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Map from "$lib/Map.svelte";
     import ArticleHeading from "$lib/ArticleHeading.svelte";
-    import ArticleImgText from "$lib/ArticleImgText.svelte";
+    import ArticleImg from "$lib/ArticleImg.svelte";
 
     //Config
     // @ts-expect-error
@@ -20,11 +20,12 @@
     src={topImg}
     alt="Løftesteinen ligger ved Eldhuset" />
 
-<ArticleImgText img={artImg}
+<ArticleImg img={artImg}
                 alt={"Some alt"}
-                text={"Some custom text"} 
-                padding={"px-4 md:px-10"}
-                imgSize={"max-h-72"}/>
+                imgSize={"max-h-72"}
+>
+    Some custom text
+</ArticleImg>
 
 <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime commodi libero iure eius, ullam aperiam amet, facilis explicabo, velit numquam impedit animi asperiores officia reprehenderit beatae accusantium nihil fugiat unde. Vero blanditiis aperiam doloremque molestiae animi unde asperiores quibusdam amet, ullam vitae repellendus reiciendis tempore sed labore error perferendis sapiente!

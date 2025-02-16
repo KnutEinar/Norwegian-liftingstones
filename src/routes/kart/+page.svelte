@@ -1,10 +1,10 @@
 <script lang="ts">
-    import Navbar from "$lib/Navbar.svelte";
-    import Map from '$lib/Map.svelte'
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Map from '$lib/components/Map.svelte';
 </script>
 
 <div class="h-dvh w-dvw flex flex-col">
-    <Navbar />
+	<Navbar />
 
-    <Map/>
+	<Map />
 </div>
