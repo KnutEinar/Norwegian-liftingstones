@@ -19,8 +19,10 @@ export async function load({ params, depends }) {
 	let article: any;
 
 	try {
+		//Article in current locale
 		article = await import(`../../../../lib/stones/${languageTag()}/${params.stoneId}.svelte`);
 	} catch (error: unknown) {
+		//Article in default locale
 		article = await import(`../../../../lib/stones/${sourceLanguageTag}/${params.stoneId}.svelte`);
 	}
 
