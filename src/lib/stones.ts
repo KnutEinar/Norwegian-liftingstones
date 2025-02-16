@@ -2,11 +2,11 @@ import * as m from '$lib/paraglide/messages';
 
 export interface stone {
 	[stoneId: string]: {
-		name: string;
+		name(): string;
 		location: { lat: number; lng: number };
 		weight: number | Array<number>;
 		liftable(): string;
-		aboutBody: string;
+		aboutBody(): string;
 		page: Boolean;
 		img?: string;
 	};
@@ -14,68 +14,66 @@ export interface stone {
 
 export const stones: stone = {
 	sunnhordaland_museum: {
-		name: 'Løftesteinen ved Sunnhordaland Museum',
+		name: () => m.sunnhordaland_museum_name(),
 		location: { lat: 59.783423, lng: 5.501304 },
 		weight: 106.5,
 		liftable: () => m.liftable_yes(),
-		aboutBody: `Ved eldhust på Sunnhordalandstunet ligger en løftestein fra Stord. Steinen er rund og sleip, og kan være utfordrende å få tak på. Steinen har blant annet blitt løftet av Torkel Ravndal.`,
+		aboutBody: () => m.sunnhordaland_museum_about(),
 		page: true,
 		img: 'Sunnhordaland'
 	},
 	israelsneset: {
-		name: 'Israelsneset Gard',
+		name: () => m.israelsneset_name(),
 		location: { lat: 59.398444, lng: 6.102514 },
 		weight: 148,
 		liftable: () => m.liftable_yes(),
-		aboutBody: 'Mer info kommer',
+		aboutBody: () => m.israelsneset_about(),
 		img: 'Israelsneset',
 		page: false
 	},
 	per_persasteinen: {
-		name: 'Per Persasteinen',
+		name: () =>m.per_persasteinen_name(),
 		location: { lat: 63.417769, lng: 10.355263 },
 		weight: 247.5,
 		liftable: () => m.liftable_yes(),
-		aboutBody:
-			'Per Persasteinen er oppkalt etter Peder Pedersen, en bydekjempe fra Fosen som skal ha løftet steinen og hugget inn teksten som står skrevet på den. Løftesteinen var kjent på Fosen, og har historisk blitt besøkt av fiskelag på vei til Lofotfiske.',
+		aboutBody: () =>
+			m.per_persasteinen_about(),
 		page: true,
 		img: 'per_persasteinen'
 	},
 	kolagarden: {
-		name: 'Mannsløftet på Kolagarden',
+		name: () => m.kolagarden_name(),
 		location: { lat: 59.656874, lng: 6.933725 },
 		weight: 128,
 		liftable: () => m.liftable_yes(),
-		aboutBody: `På Kolagarden ligger det en stein som blir kalt et Mannsløft. En mann måtte klare
-                    å løfte denne. Steinen ligger godt synlig på en liten steinknaus.`,
+		aboutBody: () => m.kolagarden_about(),
 		img: 'kolagarden',
 		page: true
 	},
 	helleland: {
-		name: 'Helleland-steinen',
+		name: () => m.helleland_name(),
 		location: { lat: 58.541571421993346, lng: 6.125394277642868 },
 		weight: 173,
 		liftable: () => m.liftable_yes(),
-		aboutBody: `Steinen ligger ved Helleland kirke, ved parkeringsplassen utenfor kirkeporten.
-                    Et løft består av å løfte steinen opp på et om lag 30 cm høyt platå (lensmanssteinen).`,
+		aboutBody: () => m.helleland_about(),
 		img: 'IMG_4290',
 		page: false
 	},
 	rysstad: {
-		name: 'Manndomssteinen på Rysstad',
+		name: () => m.rysstad_name(),
 		location: { lat: 59.09516969698624, lng: 7.527288455485615 },
 		weight: 133.5,
 		liftable: () => m.liftable_yes(),
-		aboutBody: `Manndomssteinen på Rysstad ligger utenfor Setesdalsmuseet. Den veier 133.5 kg, og kommer opprinnelig fra Fardalen, vest for Rysstad.`,
+		aboutBody: () => m.rysstad_about(),
 		page: true,
 		img: 'rysstad'
 	},
 	fjotland: {
-		name: 'Lesarsteinen og Prestesteinen',
+		name: () => m.fjotland_name(),
 		location: { lat: 58.522686877144366, lng: 6.991169064223241 },
 		weight: [102, 207],
 		liftable: () => m.liftable_yes(),
-		aboutBody: `I Fjotland ligger det to løftesteiner, den mindre Lesarsteinen, og den tyngre Prestesteinen. Lesarsteinen var en manndomsprøve for unge fjotlendinger, og Prestesteinen skal ha blitt løftet en av prestene i Fjotland på sent 1800-tallet.`,
+		aboutBody: () => m.fjotland_about(),
 		page: true,
 		img: 'fjotland'
 	}

@@ -35,16 +35,16 @@
 
 	<div class="mx-auto flex flex-col gap-8">
 		{#each Object.entries(stones) as [stoneId, stone]}
-			{#if stone.name.toLowerCase().includes(searchTerm.toLowerCase())}
+			{#if stone.name().toLowerCase().includes(searchTerm.toLowerCase())}
 				<div class="outline rounded-md shadow-lg">
 					<div class="p-5">
 						<div class="flex justify-center">
 							{#if stone.page}
 								<a class="font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}"
-									>{stone.name}</a
+									>{stone.name()}</a
 								>
 							{:else}
-								<h2 class="font-bold text-xl mx-auto text-center">{stone.name}</h2>
+								<h2 class="font-bold text-xl mx-auto text-center">{stone.name()}</h2>
 							{/if}
 						</div>
 						<div
@@ -55,7 +55,7 @@
 									<img
 										class="object-scale-down p-2"
 										src={images[`/src/lib/images/stones/${stone.img}.jpeg`].default}
-										alt="${stone.name}"
+										alt="${stone.name()}"
 									/>
 								</div>
 							{/if}
@@ -67,7 +67,7 @@
 									</p>
 									<p><strong>{m.liftable()}: </strong> {stone.liftable()}</p>
 								</div>
-								<p>{@html stone.aboutBody}</p>
+								<p>{@html stone.aboutBody()}</p>
 
 								{#if stone.page}
 									<a

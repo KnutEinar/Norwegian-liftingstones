@@ -35,11 +35,10 @@
 	let map: google.maps.Map;
 	let openInfoWindow: google.maps.InfoWindow;
 
-	onMount(async function () {
+	onMount(async () => {
 		const loader = new Loader({
 			apiKey: 'AIzaSyCl5xwKj0_wdWb8juJlNpfazdR6dDuKMLQ',
 			version: 'weekly',
-			language: languageTag()
 		});
 
 		const { Map } = (await loader.importLibrary('maps')) as google.maps.MapsLibrary;
@@ -104,7 +103,7 @@
 		const marker = new AdvancedMarkerElement({
 			map,
 			position: currStone.location,
-			title: currStone.name
+			title: currStone.name()
 		});
 
 		if (hasInfoWindow) {
@@ -116,14 +115,14 @@
 				let infoContent = `<div class="size-full flex flex-col gap-3 my-3">`;
 
 				if (currStone.page) {
-					infoContent += `<a class="font-bold text-lg text-center" href=${i18n.resolveRoute(`${base}/steinliste/${stone}`, languageTag())}>${currStone.name}</a>`;
+					infoContent += `<a class="font-bold text-lg text-center" href=${i18n.resolveRoute(`${base}/steinliste/${stone}`, languageTag())}>${currStone.name()}</a>`;
 				} else {
-					infoContent += `<h1 class="font-bold text-lg text-center">${currStone.name}</h1>`;
+					infoContent += `<h1 class="font-bold text-lg text-center">${currStone.name()}</h1>`;
 				}
 
 				if (currStone.img) {
 					infoContent += `<img class="object-scale-down size-full px-2"
-									src=${images[`/src/lib/images/stones/${currStone.img}.jpeg`].default} alt="${currStone.name}"/>`;
+									src=${images[`/src/lib/images/stones/${currStone.img}.jpeg`].default} alt="${currStone.name()}"/>`;
 				}
 
 				infoContent += `<div class="flex flex-row justify-evenly"> 
@@ -131,7 +130,7 @@
 									<p class=""> <strong>${m.liftable()}: </strong> ${currStone.liftable()}</p>
 								</div>
 								<div class="">
-									<p class="w-full">${currStone.aboutBody}</p>
+									<p class="w-full">${currStone.aboutBody()}</p>
 								</div>`;
 
 				// Append "Read More" if there is a page on this stone
