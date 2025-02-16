@@ -38,7 +38,7 @@
 	onMount(async () => {
 		const loader = new Loader({
 			apiKey: 'AIzaSyCl5xwKj0_wdWb8juJlNpfazdR6dDuKMLQ',
-			version: 'weekly',
+			version: 'weekly'
 		});
 
 		const { Map } = (await loader.importLibrary('maps')) as google.maps.MapsLibrary;

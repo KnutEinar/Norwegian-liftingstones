@@ -32,12 +32,11 @@ export const stones: stone = {
 		page: false
 	},
 	per_persasteinen: {
-		name: () =>m.per_persasteinen_name(),
+		name: () => m.per_persasteinen_name(),
 		location: { lat: 63.417769, lng: 10.355263 },
 		weight: 247.5,
 		liftable: () => m.liftable_yes(),
-		aboutBody: () =>
-			m.per_persasteinen_about(),
+		aboutBody: () => m.per_persasteinen_about(),
 		page: true,
 		img: 'per_persasteinen'
 	},
