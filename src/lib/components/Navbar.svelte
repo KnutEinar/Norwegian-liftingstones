@@ -2,6 +2,7 @@
 	import NavbarButton from '$lib/components/NavbarButton.svelte';
 	import Hamburger from './Hamburger.svelte';
 	import HamburgerButton from './HamburgerButton.svelte';
+	import LangSelectMini from './LangSelectMini.svelte';
 	import { base } from '$app/paths';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -22,8 +23,8 @@
 
 <nav class="bg-bg-gray relative">
 	<div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
-		<div class="content-center mx-8">
-			<a class="text-center font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">{m.title()}</a>
+		<div class="content-center justify-start">
+			<a class="font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">{m.title()}</a>
 		</div>
 		<div class="md:hidden">
 			<Hamburger {onHamPress} {hamburgerPressed}></Hamburger>
@@ -33,17 +34,18 @@
 				{#each links as { name, path }}
 					<NavbarButton {name} source={path} />
 				{/each}
+				<LangSelectMini />
 			</div>
 		</div>
 	</div>
 	<div
 		class={`md:hidden w-full mx-auto absolute z-10 bg-bg-gray opacity-95 ${hamburgerPressed ? 'h-min' : 'h-0'} transition-[height] duration-500 overflow-hidden`}
 	>
-		<div class="items-center flex flex-col justify-start">
+		<div class="items-center flex flex-col justify-start mb-4">
 			{#each links as { name, path }}
 				<HamburgerButton {name} source={path} onPress={() => (hamburgerPressed = false)} />
 			{/each}
-			<div class="h-2"></div>
+			<LangSelectMini />
 		</div>
 	</div>
 </nav>
