@@ -1,4 +1,5 @@
 import type { EntryGenerator } from './$types';
+import { languageTag, sourceLanguageTag } from '$lib/paraglide/runtime.js';
 import { stones } from '$lib/stones';
 
 export const entries: EntryGenerator = () => {
@@ -12,8 +13,17 @@ export const entries: EntryGenerator = () => {
 	return paths;
 };
 
-export async function load({ params }) {
-	const article = await import(`../../../../lib/stones/${params.stoneId}.svelte`);
+export async function load({ params, depends }) {
+	depends('paraglide:lang');
+
+	let article: any;
+
+	try {
+		article = await import(`../../../../lib/stones/${languageTag()}/${params.stoneId}.svelte`);
+	} catch (error: unknown) {
+		article = await import(`../../../../lib/stones/${sourceLanguageTag}/${params.stoneId}.svelte`);
+	}
+
 	const content = article.default;
 
 	return {

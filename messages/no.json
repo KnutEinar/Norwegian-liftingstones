@@ -27,5 +27,7 @@
 	"map_under_development": "Prosjektet er under utvikling",
 	"map_stone_to_be_added": "Flere løftesteiner vil bli lagt inn fortløpende. Send gjerne inn et tips dersom du vet om noen løftesteiner!",
 	"contact": "Ta kontakt",
-	"and": "og"
+	"and": "og",
+	"stone_error": "Finner ingen info om denne steinen 😢",
+	"page_error": "Finner ikke siden du leter etter 😢"
 }

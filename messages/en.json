@@ -27,5 +27,7 @@
 	"map_under_development": "This project is under development.",
 	"map_stone_to_be_added": "More lifting stones will be added continuously. Feel free to send in a tip if you know of any lifting stones!",
 	"contact": "Contact",
-	"and": "and"
+	"and": "and",
+	"stone_error": "Can't find any info about this stone 😢",
+	"page_error": "Can't find the page you're looking for 😢"
 }
