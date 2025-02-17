@@ -75,5 +75,14 @@ export const stones: stone = {
 		aboutBody: () => m.fjotland_about(),
 		page: true,
 		img: 'fjotland'
+	},
+	tausaloftet: {
+		name: () => m.tausaloftet_name(),
+		location: { lat: 59.34046270480412, lng: 6.307362058868691 },
+		weight: 73.5,
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.tausaloftet_about(),
+		page: true,
+		img: 'IMG_4772'
 	}
 };

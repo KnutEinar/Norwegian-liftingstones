@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Map from "$lib/Map.svelte";
-    import ArticleHeading from "$lib/ArticleHeading.svelte";
-    import ArticleImg from "$lib/ArticleImg.svelte";
+	import Map from "$lib/components/Map.svelte";
+    import ArticleHeading from "$lib/components/ArticleHeading.svelte";
+    import ArticleImg from "$lib/components/ArticleImg.svelte";
 	import * as m from '$lib/paraglide/messages';
 
     //Config
