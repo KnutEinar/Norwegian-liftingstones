@@ -19,20 +19,20 @@
 <enhanced:img
 	class="mx-auto object-scale-down max-h-96"
 	src={topImg}
-	alt="Løftesteinen ligger ved Eldhuset"
+	alt="The lifting stone is located by Eldhuset"
 />
 
 <p>
-	Sunnhordlandstunet er et regionalt museum som ligger i Vidstenparken i Leirvik, på Stord.
-	Løftesteinen på <strong>106.5 kg</strong> finner man inne på museumsområdet, ved inngangen til Eldhuset.
-	Det ligger også en noe mindre stein her, antagelig vis som en oppvarming for de som ønsker å prøve
-	seg på løftesteinen.
+	Sunnhordlandstunet is a regional museum located in Vidsten park in Leirvik, on the island of
+	Stord. The lifting stone, weighing <strong>106.5 kg</strong>, can be found inside the museum
+	grounds, near the entrance to Eldhuset (An old kitchen). There is also a slightly smaller stone
+	here, presumably as a warm-up for those who want to try lifting the main stone.
 </p>
 
 <p>
-	Løftet er godkjent om steinen løftes rett opp fra bakken, slik at den tydelig er over underlaget,
-	uten hjelpemidler. Steinen er rundt, og kan være rimelig sleip, derfor blir den største
-	utfordringen for de fleste å få godt nok tak på steinen.
+	A lift is considered valid if the stone is lifted straight up, such that it is clearly above the
+	ground, without any aids. The stone is round and can be quite slippery, making it difficult for
+	most people to get a good grip on it.
 </p>
 
 <div class="mx-4 md:mx-10">
@@ -42,24 +42,28 @@
 </div>
 
 <p>
-	Steinen kommer opprinnelig fra Vatnadalen, og skal ha blitt funnet av et arbeidslag i Vatnaelva i
-	1913 ved utbyggingen av kraftverket. Dette årstallet er også gravert inn på oversiden av steinen.
-	Ved den opprinnelige plasseringen ble steinen brukt som en styrkeprøve frem til 60-tallet da den
-	ble flyttet til Vidstenparken og museet. I dag ligger steinen tilgjengelig for alle som ønsker å
-	prøve seg, og den er gjevnlig gjenstand for interresse.
+	The stone originally comes from Vatnadalen and is said to have been discovered in the Vatna River
+	in 1913, by a work crew during the construction of a power plant. This year is also engraved on
+	the top of the stone. At its original location, the stone was used as a test of strength until the
+	1960s when it was moved to the Vidsten park and the museum. Today, the stone is accessible to
+	anyone who wants to try their hand at lifting it, and it continues to attract interest.
 </p>
 
 <ArticleImg
 	img={artImg}
-	alt={'Torkel Ravndal løfter steinen på Sunnhordaland Museum'}
+	alt={'Torkel Ravndal lifting the stone at Sunnhordland Museum'}
 	imgSize={'h-96'}
 >
-	Torkel Ravndal løfter steinen på Sunnhordaland Museum (foto: Avisa Sunnhordaland (1991))
+	Torkel Ravndal lifting the stone at Sunnhordland Museum (photo: Avisa Sunnhordaland, 1991)
 </ArticleImg>
 
 <p>
-	Styrkelegenden Torkel Ravndal fra Figgjo er en av dem som har løftet steinen. Da han sommeren 1991
-	hadde opptreden i Leirvik løftet han steinen, og uttalte:
+	Strength legend and Strongman Torkel Ravndal from Figgjo is one of those who has lifted the stone.
+	When he performed one of his famous strength shows in Leirvik in the summer of 1991, he lifted the
+	stone and remarked:
 </p>
 
-<p class="mx-10"><i> Slike brukte me å kyla etter kverandre på gata heime i Stavanger. </i></p>
+<p class="mx-10">
+	<i> Slike brukte me å kyla etter kverandre på gata heime i Stavanger. </i> &ensp;
+	<i> (We used to throw these at each other on the streets back home in Stavanger.) </i>
+</p>

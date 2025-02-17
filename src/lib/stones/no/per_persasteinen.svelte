@@ -29,10 +29,13 @@
 	</p>
 
 	<p class="text-center italic text-sm mt-4">
-		(På 1800-tallet ble navnene Per og Peder brukt noe om hverandre, uttaleformen er trolig Per <a
+		(På 1800-tallet ble navnene Per og Peder brukt noe om hverandre, uttaleformen er trolig Per
+		<a
+			class="font-semibold hover:text-blue-500"
 			href="https://snl.no/Peder_-_mannsnamn#:~:text=til%20d%C3%B8mes%20Peeder.)-,Skriftforma%20Peder%20kan%20i%20folketeljingane%20st%C3%A5%20for%20uttaleforma%20Per.,-Historisk%20bruk%20av"
-			class="font-semibold hover:text-blue-500">[1]</a
-		>)
+		>
+			[1]
+		</a>)
 	</p>
 </div>
 
