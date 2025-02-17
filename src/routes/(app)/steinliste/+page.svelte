@@ -7,7 +7,7 @@
 	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', {
 		eager: true,
 		query: {
-			w: 300
+			w: 500
 		}
 	});
 
