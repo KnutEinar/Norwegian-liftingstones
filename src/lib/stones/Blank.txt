@@ -2,6 +2,7 @@
 	import Map from "$lib/Map.svelte";
     import ArticleHeading from "$lib/ArticleHeading.svelte";
     import ArticleImg from "$lib/ArticleImg.svelte";
+	import * as m from '$lib/paraglide/messages';
 
     //Config
     // @ts-expect-error
