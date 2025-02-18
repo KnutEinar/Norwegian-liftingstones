@@ -84,5 +84,14 @@ export const stones: stone = {
 		aboutBody: () => m.tausaloftet_about(),
 		page: true,
 		img: 'IMG_4772'
+	},
+	trolten: {
+		name: () => m.trolten_name(),
+		location: { lat: 58.61258165127617, lng: 7.411151986619165 },
+		weight: 93.5,
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.trolten_about(),
+		page: true,
+		img: 'IMG_4266'
 	}
 };
