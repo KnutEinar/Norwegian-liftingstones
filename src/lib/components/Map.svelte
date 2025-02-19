@@ -16,19 +16,21 @@
 	});
 
 	interface Props {
-		latitude?: number;
-		longitude?: number;
+		center?: { lat: number; lng: number };
 		mapZoom?: number;
 		hasInfoWindow?: boolean;
-		marker?: string | undefined;
+		focused_marker?: string | undefined;
+		single_marker?: boolean;
+		dev_info?: boolean;
 	}
 
 	let {
-		latitude = 61.00725466051024,
-		longitude = 8.927172642666734,
+		center = { lat: 61.00725466051024, lng: 8.927172642666734 },
 		mapZoom = 6,
 		hasInfoWindow = true,
-		marker = undefined
+		focused_marker = undefined,
+		single_marker = false,
+		dev_info = false,
 	}: Props = $props();
 
 	let mapElement: HTMLElement;
@@ -44,7 +46,7 @@
 		const { Map } = (await loader.importLibrary('maps')) as google.maps.MapsLibrary;
 
 		map = new Map(mapElement, {
-			center: { lat: latitude, lng: longitude },
+			center: center,
 			zoom: mapZoom,
 			mapId: 'ab4e76c745d42374',
 			disableDefaultUI: true,
@@ -54,42 +56,33 @@
 
 		if (hasInfoWindow) {
 			openInfoWindow = new google.maps.InfoWindow({
-				maxWidth: 250
+				maxWidth: 250,
+				minWidth: 250
 			});
 
 			openInfoWindow.setHeaderDisabled(true);
 
-			let content = `	<div class="flex flex-col gap-3 my-3">
-											<h1 class="texl-lg font-bold mx-auto text-center">
-												${m.map_under_development()}
-											</h1>								
-										<p>
-										${m.map_stone_to_be_added()}  
-										</p>
-										<a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
-											href="${i18n.resolveRoute(`${base}/kontakt`, languageTag())}">${m.contact()}</a>
-									</div>`;
-
-			openInfoWindow.setContent(content);
-
-			openInfoWindow.setPosition({ lat: latitude, lng: longitude });
-			openInfoWindow.open(map, map);
+			if (dev_info) {
+				set_dev_info();
+			}
 		}
 
 		populateAllMarkers();
 	});
 
 	async function populateAllMarkers() {
-		if (marker) {
-			if (marker in stones) {
-				populateSingleMarker(marker);
-				map.setCenter(stones[marker].location);
+		if (focused_marker) {
+			if (focused_marker in stones) {
+				map.setCenter(stones[focused_marker].location);
 				map.setZoom(10);
 			}
-		} else {
-			for (let key in stones) {
-				populateSingleMarker(key);
+			if(single_marker) {
+				populateSingleMarker(focused_marker);
+				return;
 			}
+		} 
+		for (let key in stones) {
+			populateSingleMarker(key);
 		}
 	}
 
@@ -150,6 +143,24 @@
 				openInfoWindow.close();
 			});
 		}
+	}
+
+	async function set_dev_info(){
+		let content = `	<div class="flex flex-col gap-3 my-3">
+							<h1 class="texl-lg font-bold mx-auto text-center">
+								${m.map_under_development()}
+							</h1>								
+							<p>
+							${m.map_stone_to_be_added()}  
+							</p>
+							<a class="mx-auto px-2 text-sm border-2 border-black rounded-sm bg-bg-gray font-bold text-white"
+								href="${i18n.resolveRoute(`${base}/kontakt`, languageTag())}">${m.contact()}</a>
+						</div>`;
+
+		openInfoWindow.setContent(content);
+
+		openInfoWindow.setPosition(center);
+		openInfoWindow.open(map, map);
 	}
 </script>
 

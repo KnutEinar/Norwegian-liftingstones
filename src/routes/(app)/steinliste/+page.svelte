@@ -40,11 +40,13 @@
 					<div class="p-5">
 						<div class="flex justify-center">
 							{#if stone.page}
-								<a class="font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}"
-									>{stone.name()}</a
-								>
+								<h2><a class="hover:underline font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}"
+									>{stone.name()}</a>
+								</h2>
 							{:else}
-								<h2 class="font-bold text-xl mx-auto text-center">{stone.name()}</h2>
+								<h2><a class="hover:underline font-bold text-xl mx-auto text-center" href="{base}/kart/{stoneId}"
+									>{stone.name()}</a>
+								</h2>
 							{/if}
 						</div>
 						<div

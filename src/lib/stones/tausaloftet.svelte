@@ -22,7 +22,7 @@
 
 <div class="mx-4 md:mx-10">
 	<div class="w-full h-80">
-		<Map marker={stoneId} hasInfoWindow={false} />
+		<Map focused_marker={stoneId} single_marker={true} hasInfoWindow={false} />
 	</div>
 </div>
 
