@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { stones } from '$lib/stones';
+	import { stones, type stone } from '$lib/stones';
 	import Crumbs from '$lib/components/Crumbs.svelte';
 	import * as m from '$lib/paraglide/messages';
+	import { onMount } from 'svelte';
 
 	const images: any = import.meta.glob('$lib/images/stones/**.jpeg', {
 		eager: true,
@@ -12,6 +13,16 @@
 	});
 
 	let searchTerm: string = $state('');
+	let shuffled_stones: stone = $state(shuffleObject(stones));
+
+	function shuffleObject(obj: stone) {
+		const entries = Object.entries(obj);
+		for (let i = entries.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[entries[i], entries[j]] = [entries[j], entries[i]];
+    }
+    return Object.fromEntries(entries);
+}
 </script>
 
 <Crumbs />
@@ -34,7 +45,7 @@
 	</div>
 
 	<div class="mx-auto flex flex-col gap-8">
-		{#each Object.entries(stones) as [stoneId, stone]}
+		{#each Object.entries(shuffled_stones) as [stoneId, stone]}
 			{#if stone.name().toLowerCase().includes(searchTerm.toLowerCase())}
 				<div class="outline rounded-md shadow-lg">
 					<div class="p-5">
