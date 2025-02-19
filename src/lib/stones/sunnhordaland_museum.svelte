@@ -43,10 +43,10 @@
 
 <ArticleImg
 	img={artImg}
-	alt={'Torkel Ravndal løfter steinen på Sunnhordaland Museum'}
+	alt={m.sunnhordaland_museum_ravndal_img_alt()}
 	imgSize={'h-96'}
 >
-	Torkel Ravndal løfter steinen på Sunnhordaland Museum (foto: Avisa Sunnhordaland (1991))
+	{m.sunnhordaland_museum_ravndal_img_text()}
 </ArticleImg>
 
 <p>
