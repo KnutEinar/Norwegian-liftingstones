@@ -4,7 +4,7 @@ export interface stone {
 	[stoneId: string]: {
 		name(): string;
 		location: { lat: number; lng: number };
-		weight: number | Array<number>;
+		weight?: number | Array<number>;
 		liftable(): string;
 		aboutBody(): string;
 		page: Boolean;
@@ -93,5 +93,33 @@ export const stones: stone = {
 		aboutBody: () => m.trolten_about(),
 		page: true,
 		img: 'IMG_4266'
+	},
+	kyrkjekula_eidfjord: {
+		name: () => m.kyrkjekula_eidfjord_name(),
+		location: { lat: 60.46184032428071, lng: 7.070824899780569 },
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.kyrkjekula_eidfjord_about(),
+		page: false,
+	},
+	viske_loftet: {
+		name: () => m.viske_loftet_name(),
+		location: { lat: 60.629806549119216, lng: 8.539938254605559 },
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.viske_loftet_about(),
+		page: false,
+	},
+	hogdelyftet: {
+		name: () => m.hogdelyftet_name(),
+		location: { lat: 60.99910626926565, lng: 9.219736262033134 },
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.hogdelyftet_about(),
+		page: false,
+	},
+	hansasteinen: {
+		name: () => m.hansasteinen_name(),
+		location: { lat: 59.90824949716656, lng: 8.64365655731281 },
+		liftable: () => m.liftable_yes(),
+		aboutBody: () => m.hansasteinen_about(),
+		page: false,
 	}
 };

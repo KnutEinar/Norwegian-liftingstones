@@ -65,7 +65,11 @@
 								<div class="flex flex-row flex-wrap justify-center gap-10">
 									<p>
 										<strong>{m.weight()}: </strong>
-										{stone.weight.toString().replace(',', ' og ')} kg
+										{#if stone.weight} 
+											{stone.weight.toString().replace(',', ' og ')} kg
+										{:else}
+											{m.unknown()}
+										{/if}
 									</p>
 									<p><strong>{m.liftable()}: </strong> {stone.liftable()}</p>
 								</div>

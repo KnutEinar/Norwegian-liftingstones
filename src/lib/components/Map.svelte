@@ -119,7 +119,9 @@
 				}
 
 				infoContent += `<div class="flex flex-row justify-evenly"> 
-									<p class=""> <strong>${m.weight()}: </strong> ${currStone.weight.toString().replaceAll(',', ' ' + m.and() + ' ')} kg</p>
+									<p class=""> <strong>${m.weight()}: </strong> 
+									${currStone.weight ? currStone.weight.toString().replaceAll(',', ' ' + m.and() + ' ') + ' kg' : m.unknown()}
+									</p>
 									<p class=""> <strong>${m.liftable()}: </strong> ${currStone.liftable()}</p>
 								</div>
 								<div class="">
