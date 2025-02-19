@@ -110,7 +110,7 @@ export const stones: stone = {
 	},
 	hogdelyftet: {
 		name: () => m.hogdelyftet_name(),
-		location: { lat: 60.99910626926565, lng: 9.219736262033134 },
+		location: { lat: 60.981414352165714, lng: 9.230142328908089 },
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.hogdelyftet_about(),
 		page: false,

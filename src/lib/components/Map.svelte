@@ -144,6 +144,10 @@
 			map.addListener('click', function () {
 				openInfoWindow.close();
 			});
+
+			if(stone == focused_marker){
+				google.maps.event.trigger(marker, 'click');
+			}
 		}
 	}
 
