@@ -50,8 +50,8 @@
 			{m.about_3()}
 		</p>
 
-		<div class="space-y-10 md:space-y-0">
-			<div class="md:float-right">
+		<div class="flex flex-col gap-10 md:flex-row md:gap-0">
+			<div class="md:order-last my-auto">
 				<ArticleImg img={Judas} alt={m.about_judas()} imgSize={'max-h-80 min-w-80'}>
 					{m.about_judas()}
 				</ArticleImg>
