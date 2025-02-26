@@ -41,11 +41,7 @@
 	{m.sunnhordaland_museum_3()}
 </p>
 
-<ArticleImg
-	img={artImg}
-	alt={m.sunnhordaland_museum_ravndal_img_alt()}
-	imgSize={'h-96'}
->
+<ArticleImg img={artImg} alt={m.sunnhordaland_museum_ravndal_img_alt()} imgSize={'h-96'}>
 	{m.sunnhordaland_museum_ravndal_img_text()}
 </ArticleImg>
 

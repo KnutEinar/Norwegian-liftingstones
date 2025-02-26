@@ -45,7 +45,7 @@
 	</p>
 
 	<div class="md:px-10 h-[28rem]">
-		<Map dev_info={true}/>
+		<Map dev_info={true} />
 	</div>
 </div>
 

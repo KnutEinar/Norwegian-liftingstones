@@ -51,7 +51,7 @@ export const stones: stone = {
 	},
 	helleland: {
 		name: () => m.helleland_name(),
-		location: { lat: 58.541571421993346, lng: 6.125394277642868 },
+		location: { lat: 58.52110562473892, lng: 6.115260634519646 },
 		weight: 173,
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.helleland_about(),
@@ -69,7 +69,7 @@ export const stones: stone = {
 	},
 	fjotland: {
 		name: () => m.fjotland_name(),
-		location: { lat: 58.522686877144366, lng: 6.991169064223241 },
+		location: { lat: 58.522671486362455, lng: 6.991051283861507 },
 		weight: [102, 207],
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.fjotland_about(),
@@ -99,27 +99,27 @@ export const stones: stone = {
 		location: { lat: 60.46184032428071, lng: 7.070824899780569 },
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.kyrkjekula_eidfjord_about(),
-		page: false,
+		page: false
 	},
 	viske_loftet: {
 		name: () => m.viske_loftet_name(),
 		location: { lat: 60.629806549119216, lng: 8.539938254605559 },
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.viske_loftet_about(),
-		page: false,
+		page: false
 	},
 	hogdelyftet: {
 		name: () => m.hogdelyftet_name(),
 		location: { lat: 60.981414352165714, lng: 9.230142328908089 },
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.hogdelyftet_about(),
-		page: false,
+		page: false
 	},
-	hansasteinen: {
-		name: () => m.hansasteinen_name(),
+	sterkehans: {
+		name: () => m.sterkehans_name(),
 		location: { lat: 59.90824949716656, lng: 8.64365655731281 },
 		liftable: () => m.liftable_yes(),
-		aboutBody: () => m.hansasteinen_about(),
-		page: false,
+		aboutBody: () => m.sterkehans_about(),
+		page: false
 	}
 };

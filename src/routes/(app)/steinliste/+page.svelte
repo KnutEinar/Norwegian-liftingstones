@@ -20,9 +20,9 @@
 		for (let i = entries.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			[entries[i], entries[j]] = [entries[j], entries[i]];
-    }
-    return Object.fromEntries(entries);
-}
+		}
+		return Object.fromEntries(entries);
+	}
 </script>
 
 <Crumbs />
@@ -51,12 +51,18 @@
 					<div class="p-5">
 						<div class="flex justify-center">
 							{#if stone.page}
-								<h2><a class="hover:underline font-bold text-xl mx-auto text-center" href="{base}/steinliste/{stoneId}"
-									>{stone.name()}</a>
+								<h2>
+									<a
+										class="hover:underline font-bold text-xl mx-auto text-center"
+										href="{base}/steinliste/{stoneId}">{stone.name()}</a
+									>
 								</h2>
 							{:else}
-								<h2><a class="hover:underline font-bold text-xl mx-auto text-center" href="{base}/kart/{stoneId}"
-									>{stone.name()}</a>
+								<h2>
+									<a
+										class="hover:underline font-bold text-xl mx-auto text-center"
+										href="{base}/kart/{stoneId}">{stone.name()}</a
+									>
 								</h2>
 							{/if}
 						</div>
@@ -76,7 +82,7 @@
 								<div class="flex flex-row flex-wrap justify-center gap-10">
 									<p>
 										<strong>{m.weight()}: </strong>
-										{#if stone.weight} 
+										{#if stone.weight}
 											{stone.weight.toString().replace(',', ' og ')} kg
 										{:else}
 											{m.unknown()}

@@ -5,4 +5,4 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<Map focused_marker={data.stoneId}/>
+<Map focused_marker={data.stoneId} />

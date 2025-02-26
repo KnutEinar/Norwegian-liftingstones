@@ -11,10 +11,10 @@ export const entries: EntryGenerator = () => {
 	return paths;
 };
 
-export async function load({ params}) {
-	let stoneId = params.stoneId
+export async function load({ params }) {
+	let stoneId = params.stoneId;
 
-	if(stoneId in stones){
+	if (stoneId in stones) {
 		return { stoneId };
 	}
 

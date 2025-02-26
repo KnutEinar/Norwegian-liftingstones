@@ -30,7 +30,7 @@
 		hasInfoWindow = true,
 		focused_marker = undefined,
 		single_marker = false,
-		dev_info = false,
+		dev_info = false
 	}: Props = $props();
 
 	let mapElement: HTMLElement;
@@ -76,11 +76,11 @@
 				map.setCenter(stones[focused_marker].location);
 				map.setZoom(10);
 			}
-			if(single_marker) {
+			if (single_marker) {
 				populateSingleMarker(focused_marker);
 				return;
 			}
-		} 
+		}
 		for (let key in stones) {
 			populateSingleMarker(key);
 		}
@@ -145,13 +145,13 @@
 				openInfoWindow.close();
 			});
 
-			if(stone == focused_marker){
+			if (stone == focused_marker) {
 				google.maps.event.trigger(marker, 'click');
 			}
 		}
 	}
 
-	async function set_dev_info(){
+	async function set_dev_info() {
 		let content = `	<div class="flex flex-col gap-3 my-3">
 							<h1 class="texl-lg font-bold mx-auto text-center">
 								${m.map_under_development()}
