@@ -25,7 +25,7 @@
 				padding={''}
 			>
 				<a href="{base}/steinliste/kolagarden" class="underline hover:text-blue-500"
-					>Mannsløftet på Kolagarden</a
+					>{m.kolagarden_name()}</a
 				>
 			</ArticleImg>
 
