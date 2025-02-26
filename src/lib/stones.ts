@@ -13,7 +13,7 @@ export interface stone {
 }
 
 export const stones: stone = {
-	sunnhordaland_museum: {
+	vatnasteinen: {
 		name: () => m.sunnhordaland_museum_name(),
 		location: { lat: 59.783423, lng: 5.501304 },
 		weight: 106.5,

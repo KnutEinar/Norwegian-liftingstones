@@ -7,7 +7,7 @@
 	//Config
 	// @ts-expect-error
 	import topImg from '$lib/images/stones/Sunnhordaland.jpeg?enhanced&w=768';
-	let stoneId = 'sunnhordaland_museum';
+	let stoneId = 'vatnasteinen';
 
 	let heading = m.sunnhordaland_museum_name();
 

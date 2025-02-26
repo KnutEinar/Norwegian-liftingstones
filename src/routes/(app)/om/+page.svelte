@@ -71,7 +71,7 @@
 		</p>
 
 		<ArticleImg img={Veiing} alt={m.about_sunnhordaland_alt()} imgSize={'max-h-80'}>
-			<a href="{base}/steinliste/sunnhordaland_museum" class="underline hover:text-blue-500"
+			<a href="{base}/steinliste/vatnasteinen" class="underline hover:text-blue-500"
 				><i>{m.sunnhordaland_museum_name()}</i></a
 			>
 			{m.about_sunnhordaland_text()}
