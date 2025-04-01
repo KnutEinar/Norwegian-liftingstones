@@ -34,7 +34,7 @@
 </select> -->
 
 <button
-	class="outline min-w-6 font-semibold text-menu-text hover:outline outline-4 outline-offset-2 rounded-sm m-4 content-center"
+	class="min-w-6 font-semibold text-menu-text hover:outline outline-4 outline-offset-2 rounded-sm m-4 content-center"
 	onclick={switchToLanguage}
 >
 	<img class="object-fill h-6" src={lang_label[languageTag()]} alt="Current Language" />

@@ -24,8 +24,11 @@
 <nav class="bg-bg-gray relative">
 	<div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
 		<div class="content-center justify-start">
-			<a class="flex flex-row gap-3 whitespace-nowrap font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">
-				<img class="object-scale-down h-8 hidden md:block" src="/light_logo.svg" alt=""/>
+			<a
+				class="flex flex-row gap-3 whitespace-nowrap font-extrabold text-2xl text-[#c8c8c8]"
+				href="{base}/"
+			>
+				<img class="object-scale-down h-8 hidden md:block" src="/light_logo.svg" alt="" />
 				{m.title()}
 			</a>
 		</div>
