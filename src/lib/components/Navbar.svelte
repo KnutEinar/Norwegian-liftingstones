@@ -24,12 +24,15 @@
 <nav class="bg-bg-gray relative">
 	<div class="max-w-screen-xl flex items-center justify-between mx-auto p-4 h-20">
 		<div class="content-center justify-start">
-			<a class="font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">{m.title()}</a>
+			<a class="flex flex-row gap-3 whitespace-nowrap font-extrabold text-2xl text-[#c8c8c8]" href="{base}/">
+				<img class="object-scale-down h-8 hidden md:block" src="/light_logo.svg" alt=""/>
+				{m.title()}
+			</a>
 		</div>
-		<div class="md:hidden">
+		<div class="lg:hidden">
 			<Hamburger {onHamPress} {hamburgerPressed}></Hamburger>
 		</div>
-		<div class="hidden md:block">
+		<div class="hidden lg:block">
 			<div class="items-center flex justify-end">
 				{#each links as { name, path }}
 					<NavbarButton {name} source={path} />
@@ -39,7 +42,7 @@
 		</div>
 	</div>
 	<div
-		class={`md:hidden w-full mx-auto absolute z-10 bg-bg-gray opacity-95 ${hamburgerPressed ? 'h-min' : 'h-0'} transition-[height] duration-500 overflow-hidden`}
+		class={`lg:hidden w-full mx-auto absolute z-10 bg-bg-gray opacity-95 ${hamburgerPressed ? 'h-min' : 'h-0'} transition-[height] duration-500 overflow-hidden`}
 	>
 		<div class="items-center flex flex-col justify-start mb-4">
 			{#each links as { name, path }}
