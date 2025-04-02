@@ -56,7 +56,7 @@ export const stones: stone = {
 		liftable: () => m.liftable_yes(),
 		aboutBody: () => m.helleland_about(),
 		img: 'IMG_4290',
-		page: false
+		page: true
 	},
 	rysstad: {
 		name: () => m.rysstad_name(),
