@@ -17,7 +17,7 @@
 
 <ArticleHeading {heading} />
 
-<enhanced:img class="mx-auto object-scale-down max-h-96" src={topImg} alt={m.helleland_name()} />
+<enhanced:img class="mx-auto object-scale-down max-h-96" src={topImg} alt={m.about_helleland_img()} />
 
 <p>
 	{m.helleland_p1()}

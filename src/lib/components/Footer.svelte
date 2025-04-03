@@ -18,7 +18,7 @@
 						Knut Einar Skår
 						<img class="h-5 my-auto" src="/ig.png" alt="Instagram logo" />
 					</a>
-			</div>
+				</div>
 			</div>
 		</div>
 		<div class="mx-auto my-auto">
