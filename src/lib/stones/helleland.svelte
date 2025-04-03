@@ -17,13 +17,19 @@
 
 <ArticleHeading {heading} />
 
-<enhanced:img class="mx-auto object-scale-down max-h-96" src={topImg} alt={m.about_helleland_img()} />
+<enhanced:img
+	class="mx-auto object-scale-down max-h-96"
+	src={topImg}
+	alt={m.about_helleland_img()}
+/>
 
 <p>
 	{m.helleland_p1()}
 </p>
 
-<ArticleImg img={artImg} alt={''} imgSize={'max-h-72'}></ArticleImg>
+<ArticleImg img={artImg} alt={''} imgSize={'max-h-72'}>
+	{m.helleland_sherrif_stone_txt()}
+</ArticleImg>
 
 <p>
 	{m.helleland_p2()}
