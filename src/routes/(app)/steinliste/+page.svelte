@@ -12,8 +12,12 @@
 		}
 	});
 
+	let endElement: HTMLDivElement;
+
 	let searchTerm: string = $state('');
-	let shuffled_stones: stone = $state(shuffleObject(stones));
+	let maxIndex: number = $state(0);
+	// let sorted_stones: stone = $derived(Object.fromEntries(Object.entries(stones).filter((entry) => entry[1].name().toLowerCase().includes(searchTerm.toLowerCase()))));
+	let sorted_stones: stone = $state(shuffleObject(stones));
 
 	function shuffleObject(obj: stone) {
 		const entries = Object.entries(obj);
@@ -23,6 +27,22 @@
 		}
 		return Object.fromEntries(entries);
 	}
+
+	const onChangeVisibility = () => {
+		if (maxIndex < Object.keys(sorted_stones).length) {
+			maxIndex += 2;
+			console.log('scroll');
+		}
+	};
+
+	onMount(() => {
+		let observer = new IntersectionObserver(onChangeVisibility, {
+			root: null,
+			rootMargin: '0px 0px -50px 0px',
+			threshold: 1
+		});
+		observer.observe(endElement);
+	});
 </script>
 
 <Crumbs />
@@ -45,8 +65,11 @@
 	</div>
 
 	<div class="mx-auto flex flex-col gap-8">
-		{#each Object.entries(shuffled_stones) as [stoneId, stone]}
-			{#if stone.name().toLowerCase().includes(searchTerm.toLowerCase())}
+		{#each Object.entries(sorted_stones).filter((entry) => entry[1]
+				.name()
+				.toLowerCase()
+				.includes(searchTerm.toLowerCase())) as [stoneId, stone], index}
+			{#if index < maxIndex}
 				<div class="outline rounded-md shadow-lg">
 					<div class="p-5">
 						<div class="flex justify-center">
@@ -107,3 +130,5 @@
 		{/each}
 	</div>
 </div>
+
+<div bind:this={endElement} class="h-1"></div>
