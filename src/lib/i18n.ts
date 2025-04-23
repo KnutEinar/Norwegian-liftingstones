@@ -16,9 +16,9 @@ export const i18n = createI18n(runtime, {
 			no: '/steinliste/[...stoneId]',
 			en: '/stone_registry/[...stoneId]'
 		},
-		'/kart': {
-			no: '/kart',
-			en: '/map'
+		'/kart/[...stoneId]': {
+			no: '/kart/[...stoneId]',
+			en: '/map/[...stoneId]'
 		}
 	}
 });
